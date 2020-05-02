@@ -1,2 +1,2 @@
 # CompiArchives
-My solutions to problems in various competitive programming problems (and a few hacks).
+My solutions to problems in various competitive programming contests (and a few hacks).
