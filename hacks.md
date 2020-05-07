@@ -1,4 +1,5 @@
 # Some hacks for competitive programming
+Copy and paste these in your **~/.bashrc** file.
 
 1. Create an alias for quickly accessing your competitive programming directory.
 ```
