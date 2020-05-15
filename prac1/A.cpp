@@ -16,27 +16,18 @@ int main()
     test(t)
     {
         num(n);
+        arr(a,n);
 
-        vector<int> inc;
-        for(int i=1;i<=n;i*=2)
+        set<int> p;
+
+        loop(i,0,n)
         {
-            inc.push_back(i);
-            n-=i;
+            p.insert(a[i]%2);
         }
 
-        if(n>0){inc.push_back(n);}
-
-        sort(inc.begin(),inc.end());
-
-        cout<<inc.size()-1<<endl;
-
-        loop(i,1,inc.size())
-        {
-            cout<<inc[i]-inc[i-1]<<" ";
-        }
-        cout<<endl;
+        if(p.size()!=1){cout<<"NO"<<endl;}
+        else{cout<<"YES"<<endl;}
     }
-    
     return 0;
 }
 

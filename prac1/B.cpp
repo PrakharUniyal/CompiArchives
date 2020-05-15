@@ -16,27 +16,25 @@ int main()
     test(t)
     {
         num(n);
-
-        vector<int> inc;
-        for(int i=1;i<=n;i*=2)
+        arr(a,n);
+        
+        bool f = false;
+        loop(i,0,n)
         {
-            inc.push_back(i);
-            n-=i;
+            loop(j,i+2,n)
+            {
+                if(a[i]==a[j])
+                {
+                    f = true;
+                    break;
+                }
+            }
+            if(f){break;}
         }
 
-        if(n>0){inc.push_back(n);}
-
-        sort(inc.begin(),inc.end());
-
-        cout<<inc.size()-1<<endl;
-
-        loop(i,1,inc.size())
-        {
-            cout<<inc[i]-inc[i-1]<<" ";
-        }
-        cout<<endl;
+        if(f){cout<<"YES"<<endl;}
+        else {cout<<"NO"<<endl;}
     }
-    
     return 0;
 }
 

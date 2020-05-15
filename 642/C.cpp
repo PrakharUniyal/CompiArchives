@@ -17,26 +17,10 @@ int main()
     {
         num(n);
 
-        vector<int> inc;
-        for(int i=1;i<=n;i*=2)
-        {
-            inc.push_back(i);
-            n-=i;
-        }
+        int ans = n*(n+1)*(n-1)/3;
 
-        if(n>0){inc.push_back(n);}
-
-        sort(inc.begin(),inc.end());
-
-        cout<<inc.size()-1<<endl;
-
-        loop(i,1,inc.size())
-        {
-            cout<<inc[i]-inc[i-1]<<" ";
-        }
-        cout<<endl;
+        cout<<ans<<endl;
     }
-    
     return 0;
 }
 

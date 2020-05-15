@@ -16,27 +16,33 @@ int main()
     test(t)
     {
         num(n);
+        num(k);
 
-        vector<int> inc;
-        for(int i=1;i<=n;i*=2)
+        arr(a,n);
+        arr(b,n);
+
+        sort(a.begin(),a.end());
+        sort(b.begin(),b.end(),greater<int>());
+
+        int ans = 0;
+
+        int c = 0;
+        for(int i=0;i<n;i++)
         {
-            inc.push_back(i);
-            n-=i;
+            if(b[i]>a[i] && c<k)
+            {
+                ans+=b[i];
+                c++;
+            }
+            else
+            {
+                ans+=a[i];
+            }
         }
 
-        if(n>0){inc.push_back(n);}
+        cout<<ans<<endl;
 
-        sort(inc.begin(),inc.end());
-
-        cout<<inc.size()-1<<endl;
-
-        loop(i,1,inc.size())
-        {
-            cout<<inc[i]-inc[i-1]<<" ";
-        }
-        cout<<endl;
     }
-    
     return 0;
 }
 

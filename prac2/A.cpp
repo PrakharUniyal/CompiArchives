@@ -15,32 +15,29 @@ int main()
     ok;
     test(t)
     {
-        num(n);
+        num(a);
+        num(b);
+        num(x);
+        num(y);
 
-        vector<int> inc;
-        for(int i=1;i<=n;i*=2)
-        {
-            inc.push_back(i);
-            n-=i;
-        }
-
-        if(n>0){inc.push_back(n);}
-
-        sort(inc.begin(),inc.end());
-
-        cout<<inc.size()-1<<endl;
-
-        loop(i,1,inc.size())
-        {
-            cout<<inc[i]-inc[i-1]<<" ";
-        }
-        cout<<endl;
+        cout<<max(max((x)*b,(a-x-1)*b),max(a*(y),a*(b-y-1)))<<endl;
     }
-    
     return 0;
 }
 
 /*
 Explain:
+xxxxx
+xxxxx
+xxxxx
+xxxxx
+xxxxx
+xxxxx
+xxxxx
+xxxxx
+xxxxx
+xxxxx
+xxx0x
+
 
 */

@@ -9,38 +9,48 @@ using namespace std;
 #define rloop(i,m,n) for(long long i=n-1;i>=m;i--)
 #define de(n) cout<<n<<endl
 #define ok ios_base::sync_with_stdio(0); cin.tie(NULL)
+#define ll long long
+
 int main()
-#define int long long
 {
     ok;
     test(t)
     {
-        num(n);
+        num(x);
+        num(y);
+        num(l);
+        num(r);
 
-        vector<int> inc;
-        for(int i=1;i<=n;i*=2)
+        ll o = x|y;
+
+        if(o>r)
         {
-            inc.push_back(i);
-            n-=i;
+
         }
-
-        if(n>0){inc.push_back(n);}
-
-        sort(inc.begin(),inc.end());
-
-        cout<<inc.size()-1<<endl;
-
-        loop(i,1,inc.size())
+        else if(o>=l)
         {
-            cout<<inc[i]-inc[i-1]<<" ";
+            cout<<o<<endl;
         }
-        cout<<endl;
+        else
+        {
+            cout<<(o|l)<<endl;
+        }
     }
-    
     return 0;
 }
 
 /*
 Explain:
 
+X=7,Y=12
+
+4 17
+
+00111
+01100
+01111
+
+00100
+
+10001
 */

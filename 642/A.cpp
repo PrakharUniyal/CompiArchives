@@ -16,27 +16,22 @@ int main()
     test(t)
     {
         num(n);
+        num(m);
 
-        vector<int> inc;
-        for(int i=1;i<=n;i*=2)
+        if(n==1)
         {
-            inc.push_back(i);
-            n-=i;
+            cout<<0<<endl;
         }
-
-        if(n>0){inc.push_back(n);}
-
-        sort(inc.begin(),inc.end());
-
-        cout<<inc.size()-1<<endl;
-
-        loop(i,1,inc.size())
+        else if(n==2)
         {
-            cout<<inc[i]-inc[i-1]<<" ";
+            cout<<m<<endl;
         }
-        cout<<endl;
+        else
+        {
+            cout<<2*m<<endl;
+        }
+        
     }
-    
     return 0;
 }
 

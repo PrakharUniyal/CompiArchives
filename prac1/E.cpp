@@ -6,41 +6,34 @@ using namespace std;
 #define arr(a,n) vector<long long> a(n); for(long long i=0;i<n;i++) {cin>>a[i];}
 #define aout(a,i) for(int i=0;i<a.size();i++){cout<<a[i]<<" ";}cout<<endl
 #define loop(i,m,n) for(long long i=m;i<n;i++)
-#define rloop(i,m,n) for(long long i=n-1;i>=m;i--)
 #define de(n) cout<<n<<endl
 #define ok ios_base::sync_with_stdio(0); cin.tie(NULL)
 int main()
 #define int long long
 {
     ok;
-    test(t)
+    num(q);
+    num(x);
+ 
+    vector<int> mods(x,0);
+ 
+    set<pair<int,int>> vals;
+    loop(i,0,x)
     {
-        num(n);
-
-        vector<int> inc;
-        for(int i=1;i<=n;i*=2)
-        {
-            inc.push_back(i);
-            n-=i;
-        }
-
-        if(n>0){inc.push_back(n);}
-
-        sort(inc.begin(),inc.end());
-
-        cout<<inc.size()-1<<endl;
-
-        loop(i,1,inc.size())
-        {
-            cout<<inc[i]-inc[i-1]<<" ";
-        }
-        cout<<endl;
+        vals.insert(make_pair(mods[i],i));
+    }
+ 
+    loop(i,0,q)
+    {
+        num(y);
+        y%=x;
+        vals.erase(make_pair(mods[y],y));
+        mods[y]++;
+        vals.insert(make_pair(mods[y],y));
+ 
+        cout<<vals.begin()->first*x + vals.begin()->second<<endl;
     }
     
+ 
     return 0;
 }
-
-/*
-Explain:
-
-*/
