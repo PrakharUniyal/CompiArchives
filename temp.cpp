@@ -5,6 +5,10 @@ using namespace std;
 #define str(s) string s; cin>>s
 #define arr(a,n) vector<long long> a(n); for(long long i=0;i<n;i++) {cin>>a[i];}
 #define aout(a,i) for(int i=0;i<a.size();i++){cout<<a[i]<<" ";}cout<<endl
+#define ek first
+#define do second
+#define mp make_pair
+#define sort(v) sort(v.begin(),v.end())
 #define loop(i,m,n) for(long long i=m;i<n;i++)
 #define rloop(i,m,n) for(long long i=n-1;i>=m;i--)
 #define de(n) cout<<n<<endl
@@ -13,7 +17,7 @@ int main()
 #define int long long
 {
     ok;
-    cout<<"Hello\n";
+    de("Hello");
     return 0;
 }
 
